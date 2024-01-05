@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Kia Telluride</title>
+    <link rel="stylesheet" href="webStyles.css">
+  </head>
+  <body>
+    <main>
+      <h1>2021 Kia Telluride</h1>
+      <div>
+        <section class = 'YTLink'>
+          <header>Youtube review link</header>
+          <iframe width="700" height="460"
+            src="https://www.youtube.com/embed/52fagfOHqGg?start=1&autoplay=1&mute=1">
+          </iframe>
+          <footer>ACCELR8 Youtube Channel</footer>
+        </section>
+        <span>
+          <header>2021 Kia Telluride</header>
+          <img src="images/Kia.jpeg" alt="2021 Kia Telluride" class = 'carly' id='myimage'>
+          <p><button id='previous'>Previous Photo</button><button id='next'>Next Photo</button></p>
+          <p>$35,000</p>
+          <p>3.8 Liter V6</p>
+          <p>291 hp / 262 lb-ft</p>
+          <p>8 Speed Automatic</p>
+          <p>	4,353 lb</p>
+
+        </span>
+      </div>
+      <footer>
+        <img class= 'text' src="images/KiaLogo.png" alt="Kia logo" width="700">
+      </footer>
+    </main>
+    <script>
+      var myImages = ["images/Kia.jpeg","images/Kia1.jpeg","images/Kia2.jpeg","images/Kia3.jpeg","images/Kia4.jpeg"];
+      var currentImage = 0;
+      document.getElementById('next').onclick=nextPhoto;
+      document.getElementById('previous').onclick=previousPhoto;
+      function nextPhoto(){
+        currentImage++;
+        if(currentImage > myImages.length-1){
+          currentImage = 0;
+        }
+          document.getElementById("myimage").src = myImages[currentImage];
+        }
+      function previousPhoto(){
+        currentImage --;
+        if (currentImage < 0){
+          currentImage  = myImages.length-1;
+        }
+        document.getElementById("myimage").src = myImages[currentImage];
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMW M235i</title>
+    <link rel="stylesheet" href="webStyles.css">
+</head>
+<body>
+<main>
+    <h1>2015 BMW M235i </h1>
+    <div>
+        <section class = 'YTLink'>
+            <header>Youtube review link</header>
+            <iframe width="700" height="460"
+                    src="https://www.youtube.com/embed/RouQldsx_fc?start=1&autoplay=1&mute=1">
+            </iframe>
+            <footer>Alex on Autos Youtube Channel</footer>
+        </section>
+        <span>
+          <header>2022 Porsche 911 GT3</header>
+          <img src="images/Bmw.jpeg" alt="BMW M235i" class = 'carly' id='myimage'>
+          <p><button id='previous'>Previous Photo</button><button id='next'>Next Photo</button></p>
+          <p>$35,000</p>
+          <p>3.0 Liter straight 6</p>
+          <p>320 hp / 330 lb-ft</p>
+          <p> 6-speed manual transmission</p>
+          <p>	3,535 lb</p>
+
+        </span>
+    </div>
+    <footer>
+        <img id='bm'class= 'logo' src="images/BmwLogo.png" alt='BMW Emblem'>
+    </footer>
+</main>
+<script>
+  var myImages = ["images/Bmw.jpeg","images/Bmw1.jpeg","images/Bmw2.jpeg","images/Bmw3.jpeg","images/Bmw4.jpeg"];
+  var currentImage = 0;
+  document.getElementById('next').onclick=nextPhoto;
+  document.getElementById('previous').onclick=previousPhoto;
+  function nextPhoto(){
+    currentImage++;
+    if(currentImage > myImages.length-1){
+      currentImage = 0;
+    }
+      document.getElementById("myimage").src = myImages[currentImage];
+    }
+  function previousPhoto(){
+    currentImage --;
+    if (currentImage < 0){
+      currentImage  = myImages.length-1;
+    }
+    document.getElementById("myimage").src = myImages[currentImage];
+  }
+</script>
+</body>
+</html>

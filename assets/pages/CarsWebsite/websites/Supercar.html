@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Porsche 911 GT3</title>
+    <link rel="stylesheet" href="webStyles.css">
+  </head>
+  <body>
+
+    <main>
+      <h1>2023 Porsche 911 GT3 </h1>
+      <div>
+        <section class = 'YTLink'>
+          <header>Youtube review link</header>
+          <iframe width="700" height="460"
+            src="https://www.youtube.com/embed/3HuZviMoEkc?start=1&autoplay=1&mute=1">
+          </iframe>
+
+          <footer>Throttle House Youtube Channel</footer>
+        </section>
+        <span>
+          <header>2023 Porsche 911 GT3</header>
+          <img src="images/Porche.jpeg" alt="Porsche 911 GT3" class = 'carly' id='myimage'>
+          <p><button id='previous'>Previous Photo</button><button id='next'>Next Photo</button></p>
+          <p>$161,000</p>
+          <p>4.0-liter naturally aspirated boxer 6</p>
+          <p>502 hp / 346 lb-ft</p>
+          <p> 6-speed manual transmission Porsche Torque Vectoring</p>
+          <p>	3,126 lb</p>
+
+        </span>
+      </div>
+      <footer>
+        <img class= 'logo' src="images/PorcheLogo.png" alt="Porsche Emblem">
+        <img class= 'text' src="images/PorcheText.png" alt="Porsche logo text" width="700">
+      </footer>
+    </main>
+    <script>
+      var myImages = ["images/Porche.jpeg","images/Porche1.jpeg","images/Porche2.jpeg","images/Porche3.jpeg","images/Porche4.jpeg"];
+      var currentImage = 0;
+      document.getElementById('next').onclick=nextPhoto;
+      document.getElementById('previous').onclick=previousPhoto;
+      function nextPhoto(){
+        currentImage++;
+        if(currentImage > myImages.length-1){
+          currentImage = 0;
+        }
+          document.getElementById("myimage").src = myImages[currentImage];
+        }
+      function previousPhoto(){
+        currentImage --;
+        if (currentImage < 0){
+          currentImage  = myImages.length-1;
+        }
+        document.getElementById("myimage").src = myImages[currentImage];
+      }
+    </script>
+  </body>
+</html>

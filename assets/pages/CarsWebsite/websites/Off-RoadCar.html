@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lexus LX570 off-road</title>
+  <link rel="stylesheet" href="webStyles.css">
+</head>
+<body>
+    <main>
+        <h1>2018 Lexus LX570 Off-Road</h1>
+        <div>
+            <section class ='YTLink'>
+                <header>Youtube review link</header>
+                <iframe width="700" height="460"
+                    src="https://www.youtube.com/embed/qbisyOQUZzo?start=7&autoplay=1&mute=1">
+                </iframe>
+                <footer>Motorward Youtube Channel</footer>
+            </section>
+            <span>
+                <header>2018 Lexus LX570 Off-Road</header>
+                <img src="images/Lexus.jpeg" alt="2018 Lexus LX570 Off-Road" class = 'carly' id='myimage'>
+                <p><button id='previous'>Previous Photo</button><button id='next'>Next Photo</button></p>
+                <p>$87,000</p>
+                <p>5.7 Liter V8</p>
+                <p>383 hp / 403 lb-ft</p>
+                <p> 8-speed automatic</p>
+                <p>6,000 lb</p>
+
+            </span>
+        </div>
+        <footer>
+             <img id='lxi'class= 'text' src="images/LexusText.png" alt="Lexus logo text" width="700">
+        </footer>
+    </main>
+    <script>
+      var myImages = ["images/Lexus.jpeg","images/Lexus1.jpeg","images/Lexus2.jpeg","images/Lexus3.jpeg","images/Lexus4.jpeg"];
+      var currentImage = 0;
+      document.getElementById('next').onclick=nextPhoto;
+      document.getElementById('previous').onclick=previousPhoto;
+      function nextPhoto(){
+        currentImage++;
+        if(currentImage > myImages.length-1){
+          currentImage = 0;
+        }
+          document.getElementById("myimage").src = myImages[currentImage];
+        }
+      function previousPhoto(){
+        currentImage --;
+        if (currentImage < 0){
+          currentImage  = myImages.length-1;
+        }
+        document.getElementById("myimage").src = myImages[currentImage];
+      }
+    </script>
+</body>
+</html>

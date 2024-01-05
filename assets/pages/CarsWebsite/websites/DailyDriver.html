@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Acura ILX A-spec</title>
+    <link rel="stylesheet" href="webStyles.css">
+  </head>
+  <body>
+    <main>
+      <h1>2020 Acura ILX A-spec</h1>
+      <div>
+        <section class = 'YTLink'>
+          <header>Youtube review link</header>
+          <iframe width="700" height="460"
+            src="https://www.youtube.com/embed/phNGmsSAb5o?start=1&autoplay=1&mute=1">
+          </iframe>
+          <footer>Legend17 Youtube Channel</footer>
+        </section>
+        <span>
+          <header>2020 Acura ILX A-spec</header>
+          <img src="images/Acura.jpeg" alt="2020 Acura ILX A-spec" class = 'carly' id='myimage'>
+          <p><button id='previous'>Previous Photo</button><button id='next'>Next Photo</button></p>
+          <p>$26,000</p>
+          <p>2.4 Liter I4</p>
+          <p>201 hp / 180 lb-ft</p>
+          <p> 8 speed dual-clutch automatic</p>
+          <p>	3,095 lb</p>
+
+        </span>
+      </div>
+      <footer>
+        <img class= 'text' src="images/AcuraText.png" alt="Acura logo text" width="700">
+      </footer>
+    </main>
+    <script>
+      var myImages = ["images/Acura.jpeg","images/Acura1.jpeg","images/Acura2.jpeg","images/Acura3.jpeg","images/Acura4.jpeg"];
+      var currentImage = 0;
+      document.getElementById('next').onclick=nextPhoto;
+      document.getElementById('previous').onclick=previousPhoto;
+      function nextPhoto(){
+        currentImage++;
+        if(currentImage > myImages.length-1){
+          currentImage = 0;
+        }
+          document.getElementById("myimage").src = myImages[currentImage];
+        }
+      function previousPhoto(){
+        currentImage --;
+        if (currentImage < 0){
+          currentImage  = myImages.length-1;
+        }
+        document.getElementById("myimage").src = myImages[currentImage];
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #253031;
+    color: #E6FAFC;
+}
+div{
+    background-color: #315659;
+    text-align: center;
+    border: 2.5px solid #8D818C;
+    border-radius:10px;
+    padding: 1%;
+    margin: 2%;
+
+}
+.info{
+    text-align: center;
+    align-items: center;
+    display: inline-block;
+    width: 40%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    margin-bottom: 0;
+    height: 800px; /* Instead of fixed height */
+    vertical-align: top; /* Aligns the divs to the top */
+
+}
+
+img{
+    width: 175px;
+    height: 175px;
+    border: 1px solid #AB81CD;
+    border-radius:10px;
+}
+li{
+    text-align: left;
+}
+hr{
+    border-color: #8D818C;
+}
+.footer{
+    display: inline-block;
+    width: 25%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+}
+a{
+   color: #E6FAFC ;
+}
+h3{
+    border: 2.5px solid #8D818C;
+    border-radius:10px;
+}
+.list{
+    width: 250px;
+    height: 153px;
+}
+.subDiv{
+    background-color: #253031;
+}
+.txt{
+    background-color: #315659;
+    border: 1px solid #AB81CD;
+}
